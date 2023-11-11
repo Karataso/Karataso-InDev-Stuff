@@ -47,7 +47,7 @@ while True :
         os.system("clear")
         cprint("This action requires special permissions, you will be promted for your password after you enter the pakage name to uninstall", "yellow")
         rem = "sudo apt remove -y " + input("Please enter the package name : ")
-        os.system(clear)
+        os.system(rem)
         cprint("Done, option menu will show again after you press enter", "yellow")
         enter_wait = input("")
     elif ans == "C" or ans == "c":
