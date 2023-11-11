@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#This is a small script made By Karataso
+#This is a small script made By Karataso, mow moded to work on debian and apt, now Arch and pacman
 #I dont know wy you would be reading this, but since you are, feel free to use, modify, eddit, etc... This is free and oppen source code
 #This script helps lazy people like me use pacman on a more smiple and user friendly way
 #
@@ -32,7 +32,7 @@ while True :
         exit(0)
     elif ans == "S" or ans == "s":
         os.system("clear")
-        srh = "pacman -Ss " + input("Please enter the name to search : ")
+        srh = "apt search " + input("Please enter the name to search : ")
         os.system(srh)
         cprint("Done, option menu will show again after you press enter", "yellow")
         enter_wait = input("")
@@ -53,7 +53,7 @@ while True :
     elif ans == "C" or ans == "c":
         os.system("clear")
         cprint("This action requires special permissions, you will be promted for your password")
-        os.system("sudo pacman -Scc")
+        os.system("sudo apt-get clean && sudo apt-get autoremove")
         cprint("Done, option menu will show again after you press enter", "yellow")
         enter_wait = input("")
     else:
